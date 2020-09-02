@@ -5,39 +5,66 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_margin="5dp"
     tools:context=".NoteEditor">
 
     <EditText
         android:id="@+id/noteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0"
+        android:hint="Название"
+        android:textSize="20sp"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5">
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"/>
 
         <TextView
-        android:id="@+id/noteDedLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
+            android:id="@+id/noteDedLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="дэдлайн"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:layout_gravity="end"/>
 
         <ImageView
             android:id="@+id/dateTimeIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            
-            android:layout_weight="0.5"
+            android:background="@drawable/ic_baseline_date_range_24"
+            android:layout_weight="0"
             android:layout_gravity="end"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <TextView
+    <EditText
         android:id="@+id/noteText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:hint="Описание"
+        android:gravity="top"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:background="@android:color/transparent"
+        android:maxLength="1500"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
