@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android-Diplom-NotesApp</string>
+    <string name="main_activity_name">Заметки</string>
 </resources>
